@@ -20,7 +20,7 @@ app.use(express.urlencoded({extended: true}));
 
 const corsOptions = {
     // origin: ['http://localhost:3000', 'http://zuitt-bootcamp-prod-495-8103-zaragoza.s3-website.us-east-1.amazonaws.com'],
-    origin: ['http://localhost:10000', 'https://fitnessapi-zaragoza.onrender.com'],
+    origin: ['http://localhost:3000'],
     credentials: true,
     optionsSuccessStatus: 200
 };
@@ -30,6 +30,9 @@ app.use(cors(corsOptions));
 app.use("/users", userRoutes);
 app.use("/workouts", workoutRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Fitness API!');
+});
 
 if(require.main === module) {
 	app.listen(process.env.PORT || 3000, () => {
