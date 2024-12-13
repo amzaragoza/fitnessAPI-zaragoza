@@ -20,7 +20,7 @@ app.use(express.urlencoded({extended: true}));
 
 const corsOptions = {
     // origin: ['http://localhost:3000', 'http://zuitt-bootcamp-prod-495-8103-zaragoza.s3-website.us-east-1.amazonaws.com'],
-    origin: ['http://localhost:3000'],
+    origin: ['http://localhost:10000'],
     credentials: true,
     optionsSuccessStatus: 200
 };
