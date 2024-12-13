@@ -29,6 +29,9 @@ app.use(cors(corsOptions));
 app.use("/users", userRoutes);
 app.use("/workouts", workoutRoutes);
 
+// app.get('/', (req, res) => {
+//   res.send('Welcome to the Fitness API!');
+// });
 
 if(require.main === module) {
 	app.listen(process.env.PORT || 3000, () => {
